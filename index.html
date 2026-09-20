@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teste de nível de inglês · Rodolfo Silva</title>
+<meta name="description" content="Descubra seu nível de inglês (A1 a C1) em 3 minutos. Teste gratuito com listening, feito pelo professor Rodolfo Silva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1b3d; --ink-2:#44507a; --paper:#f5f7fc; --card:#ffffff; --line:#d7ddf0;
+  --blue:#2153e0; --on-blue:#ffffff; --blue-soft:#e7edff;
+  --red:#d92d3a; --ok:#1a7a4a; --ok-soft:#e3f5ec;
+  --shadow:0 1px 2px rgba(15,27,61,.06),0 14px 34px rgba(15,27,61,.09);
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Figtree','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eef2ff; --ink-2:#a9b4d8; --paper:#0b1330; --card:#131e45; --line:#293873;
+    --blue:#7fa0ff; --on-blue:#0b1330; --blue-soft:#1b2a5e;
+    --red:#ff6b75; --ok:#5fd39b; --ok-soft:#12352a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 34px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eef2ff; --ink-2:#a9b4d8; --paper:#0b1330; --card:#131e45; --line:#293873;
+  --blue:#7fa0ff; --on-blue:#0b1330; --blue-soft:#1b2a5e;
+  --red:#ff6b75; --ok:#5fd39b; --ok-soft:#12352a;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 34px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--body);padding-inline:16px;padding-block:20px 48px;min-height:100vh}
+main{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--ink-2)}
+.brand b{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--blue);color:var(--on-blue);font:800 15px var(--display)}
+h1,h2{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7.5vw,2.9rem);font-weight:800}
+h1 em{font-style:normal;color:var(--red)}
+h2{font-size:clamp(1.5rem,5.5vw,2rem);font-weight:800}
+p{margin:0}
+.lede{color:var(--ink-2);font-size:1.06rem;max-width:56ch}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13.5px;font-weight:600;color:var(--ink-2);background:var(--card)}
+.btn{appearance:none;border:0;cursor:pointer;font:700 1.02rem var(--body);border-radius:14px;padding:15px 22px;background:var(--blue);color:var(--on-blue);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;width:100%;transition:transform .12s ease,filter .12s ease;text-align:center}
+.btn:hover{filter:brightness(1.06)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.wa{background:#128c4a;color:#fff}
+.link{background:none;border:0;padding:6px 0;color:var(--ink-2);font:600 14px var(--body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.note{font-size:13.5px;color:var(--ink-2)}
+.teacher{display:flex;gap:14px;align-items:flex-start}
+.teacher .mono{flex:none;width:46px;height:46px;border-radius:14px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font:800 19px var(--display)}
+.teacher p{font-size:14.5px;color:var(--ink-2)} .teacher strong{color:var(--ink)}
+.progress{display:flex;gap:4px}
+.progress i{flex:1;height:6px;border-radius:99px;background:var(--line)}
+.progress i.done{background:var(--blue)} .progress i.now{background:var(--red)}
+.qmeta{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.tag{border:1px solid var(--line);border-radius:8px;padding:2px 9px;font-size:12.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.passage{background:var(--blue-soft);border-radius:12px;padding:14px 16px;font-size:16px;margin-block:4px 2px}
+.audio{display:flex;align-items:center;gap:12px;background:var(--blue-soft);border-radius:14px;padding:12px 14px}
+.audio button{flex:none;width:52px;height:52px;border-radius:50%;border:0;background:var(--blue);color:var(--on-blue);display:grid;place-items:center;cursor:pointer}
+.audio button[disabled]{opacity:.45;cursor:not-allowed}
+.audio span{font-size:14px;color:var(--ink-2)}
+.prompt{font:700 1.2rem/1.35 var(--body);margin-block:6px 2px}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.opt{appearance:none;text-align:left;cursor:pointer;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;font:500 1.02rem/1.35 var(--body);display:flex;gap:12px;align-items:baseline;min-height:52px}
+.opt:hover{border-color:var(--blue)}
+.opt kbd{font:700 12.5px var(--body);color:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:0 7px;flex:none}
+.steps{margin:0;padding-left:20px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
+.level{display:flex;align-items:center;gap:18px}
+.level .big{font:800 clamp(3.6rem,18vw,5.4rem)/1 var(--display);letter-spacing:-.04em;color:var(--blue)}
+.level .name{font-weight:700;font-size:1.15rem}
+.level .sub{color:var(--ink-2);font-size:14.5px}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-block:4px}
+.ladder div{text-align:center;padding:8px 0;border-radius:10px;background:var(--blue-soft);color:var(--ink-2);font-weight:700;font-size:14px}
+.ladder div.on{background:var(--blue);color:var(--on-blue)}
+.review ul{margin:8px 0 0;padding-left:20px;color:var(--ink-2)}
+.demo{background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600}
+.stack{display:flex;flex-direction:column;gap:14px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><b>R</b><span>Rodolfo Silva · Professor de Inglês</span></div>
+
+  <!-- INÍCIO -->
+  <section id="s-intro" class="stack">
+    <p class="eyebrow">Teste gratuito · cerca de 3 minutos</p>
+    <h1>Qual é o seu nível de inglês <em>de verdade</em>?</h1>
+    <p class="lede">São 12 perguntas que se ajustam às suas respostas, com listening. No final você recebe uma estimativa do seu nível (de A1 a C1) e por onde começar.</p>
+    <ul class="chips" aria-label="Sobre o teste">
+      <li>12 perguntas</li><li>Com áudio</li><li>Gratuito</li>
+    </ul>
+    <button class="btn" id="btn-start" type="button">Começar o teste</button>
+    <p class="note">É uma estimativa, não uma prova oficial. O nível real a gente confirma conversando, na aula experimental gratuita.</p>
+    <div class="card teacher">
+      <div class="mono" aria-hidden="true">RS</div>
+      <p><strong>Rodolfo Silva</strong> · Licenciado em Letras-Inglês (UFPE), Cambridge C2. Aulas online individuais para adultos e profissionais, do básico ao avançado.</p>
+    </div>
+    <div id="demo-note" class="demo" hidden>Modo demonstração: o formulário de contato ainda não está ligado.</div>
+  </section>
+
+  <!-- PERGUNTAS -->
+  <section id="s-quiz" class="stack" hidden aria-live="polite">
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="qmeta"><span id="q-count"></span><span class="tag" id="q-tag"></span></div>
+    <div class="card stack" id="q-card"></div>
+    <div><button class="link" type="button" id="btn-skip">Não sei essa</button></div>
+  </section>
+
+  <!-- ENTREGA DO RESULTADO (contato pelo Microsoft Forms) -->
+  <section id="s-lead" class="stack" hidden>
+    <p class="eyebrow">Resultado pronto</p>
+    <h2>Seu resultado está calculado.</h2>
+    <p class="lede">Para ver o resultado e receber uma devolutiva personalizada do professor, preencha um formulário rápido, de cerca de 30 segundos. O seu nível já vai preenchido.</p>
+    <div class="card stack">
+      <ol class="steps">
+        <li>Toque em <strong>Preencher e receber a devolutiva</strong>. Abre em outra aba.</li>
+        <li>Envie o formulário e volte para esta página.</li>
+        <li>Toque em <strong>Já enviei, ver meu resultado</strong>.</li>
+      </ol>
+      <a class="btn" id="btn-form" target="_blank" rel="noopener">Preencher e receber a devolutiva</a>
+      <button class="btn ghost" id="btn-reveal" type="button">Já enviei, ver meu resultado</button>
+    </div>
+    <p class="note">Seus dados vão só para Rodolfo Silva, para enviar o resultado e falar da aula experimental. Você autoriza dentro do formulário e pode pedir a exclusão quando quiser.</p>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="s-result" class="stack" hidden>
+    <p class="eyebrow">Seu nível estimado</p>
+    <div class="level">
+      <div class="big" id="r-code" aria-label="Nível estimado"></div>
+      <div><div class="name" id="r-name"></div><div class="sub" id="r-sub"></div></div>
+    </div>
+    <div class="ladder" id="r-ladder" aria-hidden="true"></div>
+    <p class="lede" id="r-text"></p>
+    <div class="card review" id="r-review" hidden>
+      <strong>Vale revisar</strong>
+      <ul id="r-topics"></ul>
+    </div>
+    <a class="btn wa" id="btn-wa" target="_blank" rel="noopener">Agendar minha aula experimental gratuita</a>
+    <p class="note">Estimativa baseada em 12 perguntas, sem fala nem escrita. Na aula experimental você conversa com o professor e recebe o diagnóstico completo.</p>
+    <button class="link" type="button" id="btn-again">Refazer o teste</button>
+  </section>
+</main>
+
+<script>
+(function(){
+'use strict';
+
+/* ===== CONFIGURAÇÃO ===== */
+var CONFIG = {
+  whatsapp: '5581996248842',   // confirme: DDI 55 + DDD + número
+  total: 12,
+  // Link PRÉ-PREENCHIDO do seu Microsoft Forms (veja COMO-PUBLICAR.md, passo 3).
+  // Nos campos que a página preenche, use exatamente estas palavras ao gerar o link:
+  //   TKNIVEL  (nível estimado)   TKACERTOS  (acertos)   TKTOPICOS  (tópicos a revisar)
+  formTemplate: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAOGyXmJUNkNCMEoxN1lXUzBTN1lOWVdPWkdUVTZESS4u&rc6d51ae2204442deb9da972fd7aa3abd=TKNIVEL&r41a3eb305fb84dfb9eea786bb642390c=TKACERTOS&r7d7d623c3e7b4201b12911bf2253d3b0=TKTOPICOS'
+};
+
+var LEVELS = [
+  {code:'A1', name:'Iniciante', text:'Você está no começo da jornada, e é um ótimo ponto de partida. O foco aqui é construir frases essenciais, o verbo to be, a rotina e o vocabulário do dia a dia, falando desde a primeira aula.'},
+  {code:'A2', name:'Básico', text:'Você já se vira em situações simples. O próximo passo é ganhar segurança com o passado, fazer comparações e conseguir conversar sobre o seu dia a dia sem travar.'},
+  {code:'B1', name:'Intermediário', text:'Você já se comunica no essencial. Agora o ganho está em fluência: usar melhor os tempos verbais, explicar ideias, dar opinião e entender inglês falado em velocidade normal.'},
+  {code:'B2', name:'Intermediário superior', text:'Você tem boa autonomia. O foco passa a ser precisão e naturalidade: vocabulário mais rico, expressões, e o inglês do trabalho em reuniões, e-mails e apresentações.'},
+  {code:'C1', name:'Avançado', text:'Seu nível é avançado. O trabalho agora é refinar nuances: registro formal e informal, argumentação, negociação e comunicação de alto impacto.'}
+];
+var CAT = {grammar:'Gramática', vocab:'Vocabulário', reading:'Leitura', listening:'Listening'};
+
+/* ===== BANCO DE QUESTÕES (l = nível 0..4, c = categoria, t = tópico, a = índice da resposta correta) ===== */
+var BANK = [
+ // A1
+ {l:0,c:'grammar',t:'Verbo to be',q:'She ___ a teacher.',o:['is','are','am','be'],a:0},
+ {l:0,c:'grammar',t:'Presente simples',q:'I ___ coffee in the morning.',o:['like','likes','liking','to like'],a:0},
+ {l:0,c:'grammar',t:'Adjetivos possessivos',q:'A: What’s your name?  B: ___ name is Ana.',o:['My','I','Me','Mine'],a:0},
+ {l:0,c:'reading',t:'Leitura básica',p:'Tom is 25. He lives in London. He works in a bank.',q:'Where does Tom work?',o:['In a bank','In London','At home','At school'],a:0},
+ {l:0,c:'listening',t:'Números no listening',s:'My brother has two dogs.',q:'How many dogs does his brother have?',o:['One','Two','Three','Four'],a:1},
+ {l:0,c:'grammar',t:'There is / There are',q:'There ___ two books on the table.',o:['is','are','be','am'],a:1},
+ // A2
+ {l:1,c:'grammar',t:'Passado simples',q:'Yesterday I ___ to the supermarket.',o:['go','went','gone','going'],a:1},
+ {l:1,c:'grammar',t:'Comparativos',q:'She is ___ than her sister.',o:['tall','taller','tallest','more tall'],a:1},
+ {l:1,c:'vocab',t:'Collocations (do / make)',q:'Can you ___ me a favor?',o:['do','make','take','put'],a:0},
+ {l:1,c:'reading',t:'Leitura de mensagem',p:'Hi Carla, I can’t come to the party on Saturday because I have to work. Can we meet on Sunday instead? — Mia',q:'Why can’t Mia come on Saturday?',o:['She has to work.','She is sick.','She is traveling.','She has another party.'],a:0},
+ {l:1,c:'listening',t:'Horas no listening',s:'The train leaves at half past seven.',q:'What time does the train leave?',o:['7:00','7:15','7:30','7:45'],a:2},
+ {l:1,c:'grammar',t:'Preposições de tempo',q:'The meeting is ___ Monday at 9 a.m.',o:['in','on','at','by'],a:1},
+ // B1
+ {l:2,c:'grammar',t:'Second conditional',q:'If I ___ more time, I would learn another language.',o:['have','had','will have','would have'],a:1},
+ {l:2,c:'grammar',t:'Present perfect (for / since)',q:'I’ve lived in Recife ___ 2015.',o:['for','since','from','during'],a:1},
+ {l:2,c:'vocab',t:'Phrasal verbs',q:'The company decided to ___ the launch until next month.',o:['put off','put on','put up','put in'],a:0},
+ {l:2,c:'reading',t:'Leitura de texto curto',p:'Remote work has become common. Many employees say they save time and money because they don’t commute. However, some feel isolated and find it harder to separate work from personal life.',q:'According to the text, what is a disadvantage of remote work?',o:['Some workers feel isolated.','It costs more money.','It takes more time.','It is not common.'],a:0},
+ {l:2,c:'listening',t:'Preferências e motivos (listening)',s:'I’d rather take the bus than drive, because parking downtown is really expensive.',q:'Why does the speaker prefer the bus?',o:['Parking is expensive.','The bus is faster.','He doesn’t have a car.','Driving is dangerous.'],a:0},
+ {l:2,c:'grammar',t:'Perguntas indiretas',q:'She asked me where ___.',o:['I lived','did I live','do I live','I did live'],a:0},
+ // B2
+ {l:3,c:'grammar',t:'Past perfect',q:'By the time we arrived, the movie ___.',o:['already started','had already started','has already started','was already starting'],a:1},
+ {l:3,c:'grammar',t:'Wish + past perfect',q:'I wish I ___ more attention in class when I was younger.',o:['paid','had paid','would pay','have paid'],a:1},
+ {l:3,c:'vocab',t:'Vocabulário profissional',q:'The manager asked us to ___ our expectations, because the budget is limited.',o:['lower','raise','lift','rise'],a:0},
+ {l:3,c:'reading',t:'Compreensão de argumento',p:'Although the new policy was introduced to reduce costs, critics argue that it has actually decreased productivity, since employees now spend more time filling out forms.',q:'What is the critics’ main argument?',o:['The policy hurts productivity because of extra paperwork.','The policy has increased costs for employees.','Employees enjoy filling out forms.','The policy was never introduced.'],a:0},
+ {l:3,c:'listening',t:'Estruturas enfáticas (listening)',s:'Not only did the project finish ahead of schedule, but it also came in under budget.',q:'What does the speaker say about the project?',o:['It finished early and cost less than planned.','It finished late but was cheap.','It was on time but expensive.','It was cancelled.'],a:0},
+ {l:3,c:'grammar',t:'Dedução com modais',q:'I didn’t hear the phone ring. I ___ asleep.',o:['must have been','must be','should be','can have been'],a:0},
+ // C1
+ {l:4,c:'grammar',t:'Inversão',q:'Hardly ___ the office when it started to rain.',o:['had he left','he had left','did he leave','has he left'],a:0},
+ {l:4,c:'grammar',t:'Orações relativas',q:'The report, ___ findings were controversial, was published last week.',o:['whose','which','that','of which'],a:0},
+ {l:4,c:'vocab',t:'Vocabulário avançado',q:'Her argument was so ___ that nobody could refute it.',o:['compelling','compulsive','compatible','complacent'],a:0},
+ {l:4,c:'reading',t:'Inferência em texto',p:'The author contends that innovation is less a product of isolated genius than of environments in which ideas collide.',q:'What does the author imply?',o:['Innovation depends more on interaction than on individual brilliance.','Only isolated geniuses can innovate.','Environments where ideas collide harm creativity.','Ideas should be kept separate to grow.'],a:0},
+ {l:4,c:'listening',t:'Condicional com inversão (listening)',s:'Had I known about the delay, I would have booked a different flight.',q:'What does the speaker mean?',o:['He didn’t know about the delay, so he booked that flight.','He knew about the delay and booked another flight.','He will book a different flight now.','He cancelled his flight.'],a:0},
+ {l:4,c:'grammar',t:'It’s high time',q:'It’s high time we ___ the problem seriously.',o:['took','take','have taken','would take'],a:0}
+];
+
+/* ===== UTILITÁRIOS ===== */
+function $(id){return document.getElementById(id);}
+function show(id){['s-intro','s-quiz','s-lead','s-result'].forEach(function(s){$(s).hidden = (s!==id);}); window.scrollTo({top:0});}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function txt(tag,text,cls){var e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;}
+
+/* ===== VOZ (listening por síntese de voz do navegador) ===== */
+var speech = {ok:false, voice:null};
+function loadVoices(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = window.speechSynthesis.getVoices() || [];
+  var en = vs.filter(function(v){return /^en[-_]/i.test(v.lang);});
+  var pick = en.filter(function(v){return /en[-_]US/i.test(v.lang);})[0] || en[0] || null;
+  speech.voice = pick; speech.ok = !!pick;
+}
+if('speechSynthesis' in window){
+  loadVoices();
+  window.speechSynthesis.addEventListener && window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
+}
+function speak(sentence){
+  if(!speech.ok) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(sentence);
+  u.voice = speech.voice; u.lang = speech.voice.lang; u.rate = 0.92;
+  window.speechSynthesis.speak(u);
+}
+
+/* ===== ESTADO DO TESTE ===== */
+var st;
+function newState(){
+  return {lvl:1, n:0, used:{}, log:[], lastCat:null, current:null, plays:0};
+}
+function pickItem(){
+  var order=[st.lvl, st.lvl-1, st.lvl+1, st.lvl-2, st.lvl+2, st.lvl-3, st.lvl+3, st.lvl-4, st.lvl+4];
+  for(var k=0;k<order.length;k++){
+    var L=order[k]; if(L<0||L>4) continue;
+    var pool = BANK.map(function(it,i){return {it:it,i:i};}).filter(function(x){
+      return x.it.l===L && !st.used[x.i] && (x.it.c!=='listening' || speech.ok);
+    });
+    if(!pool.length) continue;
+    var varied = pool.filter(function(x){return x.it.c!==st.lastCat;});
+    return shuffle(varied.length?varied:pool)[0];
+  }
+  return null;
+}
+function start(){
+  st = newState();
+  next();
+}
+function next(){
+  if(st.n>=CONFIG.total){ return finish(); }
+  var c = pickItem();
+  if(!c){ return finish(); }
+  st.used[c.i]=true; st.current=c.it; st.lastCat=c.it.c; st.plays=0;
+  st.currentOpts = shuffle(c.it.o.map(function(t,idx){return {t:t,ok:idx===c.it.a};}));
+  renderQuestion();
+  show('s-quiz');
+}
+function renderQuestion(){
+  var it=st.current, total=CONFIG.total;
+  var pr=$('progress'); pr.textContent='';
+  for(var i=0;i<total;i++){var b=document.createElement('i'); b.className = i<st.n?'done':(i===st.n?'now':''); pr.appendChild(b);}
+  $('q-count').textContent='Pergunta '+(st.n+1)+' de '+total;
+  $('q-tag').textContent=CAT[it.c];
+  var card=$('q-card'); card.textContent='';
+  if(it.c==='listening'){
+    var au=document.createElement('div'); au.className='audio';
+    var btn=document.createElement('button'); btn.type='button'; btn.id='btn-play'; btn.setAttribute('aria-label','Ouvir o áudio');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12zM14 3.2v2.06a7 7 0 0 1 0 13.48v2.06A9 9 0 0 0 14 3.2z"/></svg>';
+    var lab=txt('span','Toque para ouvir (até 3 vezes)');
+    btn.addEventListener('click',function(){
+      if(st.plays>=3) return; st.plays++; speak(it.s);
+      if(st.plays>=3){btn.disabled=true; lab.textContent='Limite de áudios atingido';} else {lab.textContent='Ouvido '+st.plays+' de 3 vezes';}
+    });
+    au.appendChild(btn); au.appendChild(lab); card.appendChild(au);
+  }
+  if(it.p){card.appendChild(txt('div',it.p,'passage'));}
+  card.appendChild(txt('div',it.q,'prompt'));
+  var wrap=document.createElement('div'); wrap.className='opts';
+  st.currentOpts.forEach(function(o,idx){
+    var b=document.createElement('button'); b.type='button'; b.className='opt';
+    b.appendChild(txt('kbd',String(idx+1))); b.appendChild(txt('span',o.t));
+    b.addEventListener('click',function(){answer(o.ok);});
+    wrap.appendChild(b);
+  });
+  card.appendChild(wrap);
+}
+function answer(correct){
+  if(window.speechSynthesis) window.speechSynthesis.cancel();
+  var it=st.current;
+  st.log.push({l:it.l,t:it.t,ok:!!correct});
+  if(correct){st.lvl=Math.min(4,st.lvl+1);} else {st.lvl=Math.max(0,st.lvl-1);}
+  st.n++;
+  next();
+}
+document.addEventListener('keydown',function(e){
+  if($('s-quiz').hidden) return;
+  var n=parseInt(e.key,10);
+  if(n>=1 && n<=4 && st.currentOpts[n-1]){ answer(st.currentOpts[n-1].ok); }
+});
+$('btn-skip').addEventListener('click',function(){answer(false);});
+$('btn-start').addEventListener('click',function(){
+  loadVoices(); setTimeout(function(){loadVoices(); start();}, 250);
+});
+
+/* ===== ESTIMATIVA DE NÍVEL ===== */
+function estimate(){
+  // Máxima verossimilhança: procura a habilidade (em degraus de nível) que melhor explica os acertos e erros,
+  // já descontando o acerto ao acaso (4 alternativas = 25%). Chute aleatório resulta em A1.
+  var best=-Infinity, theta=-1;
+  for(var t=-1;t<=5.0001;t+=0.05){
+    var ll=0;
+    for(var k=0;k<st.log.length;k++){
+      var x=st.log[k], p=0.25+0.75/(1+Math.exp(-1.7*(t-x.l)));
+      ll+=Math.log(x.ok?p:1-p);
+    }
+    if(ll>best+1e-9){best=ll;theta=t;}
+  }
+  var est=Math.max(0,Math.min(4,Math.round(theta)));
+  var above = est<4 && (theta-est)>=0.25;
+  var correct = st.log.filter(function(x){return x.ok;}).length;
+  var missed=[]; st.log.forEach(function(x){ if(!x.ok && missed.indexOf(x.t)<0) missed.push(x.t); });
+  return {est:est, above:above, correct:correct, total:st.log.length, missed:missed.slice(0,5)};
+}
+
+/* ===== ENTREGA: contato pelo Microsoft Forms, depois o resultado ===== */
+var RES=null;
+function formUrl(){
+  var t=CONFIG.formTemplate; if(!t) return '';
+  var missed=RES.missed.length?RES.missed.join('; '):'nenhum';
+  return t.replace(/TKNIVEL/g, encodeURIComponent(LEVELS[RES.est].code))
+          .replace(/TKACERTOS/g, encodeURIComponent(RES.correct+' de '+RES.total))
+          .replace(/TKTOPICOS/g, encodeURIComponent(missed));
+}
+function prepareLead(){
+  var url=formUrl();
+  if(url){ $('btn-form').href=url; $('btn-form').hidden=false; $('btn-reveal').textContent='Já enviei, ver meu resultado'; }
+  else { $('btn-form').hidden=true; $('btn-reveal').textContent='Ver meu resultado (demonstração)'; }
+}
+function finish(){
+  RES=estimate();
+  try{ sessionStorage.setItem('rs_res', JSON.stringify(RES)); }catch(e){}
+  prepareLead(); show('s-lead');
+}
+$('btn-reveal').addEventListener('click',function(){ renderResult(); });
+
+function renderResult(){
+  var lv=LEVELS[RES.est];
+  $('r-code').textContent=lv.code;
+  $('r-name').textContent=lv.name;
+  $('r-sub').textContent = RES.correct+' de '+RES.total+' acertos' + (RES.above ? ' · já perto do '+LEVELS[RES.est+1].code : '');
+  var ld=$('r-ladder'); ld.textContent='';
+  LEVELS.forEach(function(x,i){var d=document.createElement('div'); d.textContent=x.code; if(i===RES.est) d.className='on'; ld.appendChild(d);});
+  $('r-text').textContent=lv.text;
+  var topics=$('r-topics'); topics.textContent='';
+  RES.missed.forEach(function(t){topics.appendChild(txt('li',t));});
+  $('r-review').hidden = !RES.missed.length;
+  var msg='Olá, Rodolfo! Fiz o teste de nível e meu resultado estimado foi '+lv.code+' ('+RES.correct+'/'+RES.total+'). Gostaria de agendar minha aula experimental gratuita.';
+  $('btn-wa').href='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(msg);
+  show('s-result');
+}
+$('btn-again').addEventListener('click',function(){
+  try{ sessionStorage.removeItem('rs_res'); }catch(e){}
+  show('s-intro');
+});
+
+/* ===== INICIALIZAÇÃO ===== */
+if(!CONFIG.formTemplate) $('demo-note').hidden=false;
+// se a pessoa voltar do formulário e a página tiver sido recarregada, retoma a entrega do resultado
+try{
+  var saved=sessionStorage.getItem('rs_res');
+  if(saved){ RES=JSON.parse(saved); if(RES && typeof RES.est==='number'){ prepareLead(); show('s-lead'); } }
+}catch(e){}
+})();
+</script>
+<noscript><p style="padding:16px">Este teste precisa de JavaScript. Ative-o no navegador ou fale com o professor pelo WhatsApp.</p></noscript>
+</body>
+</html>
